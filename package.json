@@ -1,11 +1,38 @@
 {
+  "name": "w6d4",
+  "version": "1.0.0",
+  "description": "Node Server",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./dist/index.js -w",
+    "start:mon": "cross-env PORT=4300 nodemon ./dist/index.js",
+    "build": "tsc -w"
+  },
+  "keywords": [
+    "node",
+    "server"
+  ],
+  "author": "Gonzu",
+  "license": "ISC",
   "devDependencies": {
     "@types/jest": "^29.4.0",
     "@types/node": "^18.14.1",
     "@typescript-eslint/eslint-plugin": "^5.53.0",
     "@typescript-eslint/parser": "^5.53.0",
+    "eslint": "^8.34.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-config-xo": "^0.43.1",
+    "eslint-config-xo-typescript": "^0.56.0",
     "ts-jest": "^29.0.5",
     "typescript": "^4.9.5"
+  },
+  "extends": [
+    "xo, prettier"
+  ],
+  "prettier": {
+    "singleQuote": true
   },
   "dependencies": {
     "cross-env": "^7.0.3",
